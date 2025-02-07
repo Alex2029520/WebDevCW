@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="websiteTemplate.css">
+
+    <style>
+        /* banner */
+        .banner {
+            min-height: 80vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+            url(images/w2008378/feedback.avif);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* intro */
+        .intro {
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .intro h1 {
+            font-size: 60px;
+            color: #fff;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        /* feedback */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .container p {
+            color: #005F38;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 1000;
+        }
+
+        fieldset {
+            border: transparent;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: 600;
+        }
+
+        /* rating */
+        .color-text {
+            text-align: center;
+            width: 75px;
+            display: inherit;
+        }
+        #statusrow{
+            width: 100% !important;
+            text-align: center;
+            display: inline-block;
+        }
+
+        #statusrow input {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* purchase */
+        div.purchase {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .purchaseLabel {
+            margin-right: 20px;
+        }
+
+        input[type=radio],
+        input.radio {
+            margin: 2px 10px 0 0; 
+        }
+
+
+        /* other parts of the form */
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea,
+        .submitButton {
+            width: 100%; 
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 18px; 
+        }
+
+        .submitButton {
+            background-color: #005F38;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .submitButton:hover {
+            background-color: #004E21;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .highlight {
+            border: 2px solid red;
+        }
+
+        .editButton {
+            background-color: #005F38;
+            color: #fff;
+            cursor: pointer;
+            border: 1px solid #005F38;
+            border-radius: 2px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .editButton:hover {
+            background-color: #004E21;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- nav bar -->
+    <div class="banner">
+        <nav>
+            <img src="images/w2008378/logo.png" class="logo" alt="logo">
+            <div class="navLinks">
+                <ul>
+                    <li><a href="#" class="home">HOME</a></li>
+                    <li><a href="#" class="gallery">GALLERY</a></li>
+                    <li><a href="#" class="shop">SHOP</a></li>
+                    <li><a href="#" class="feedback">FEEDBACK</a></li>
+                    <li><a href="#" class="sitemap">SITEMAP</a></li>
+                    <li>
+                        <a href="#">EXPLORE FURTHER</a>
+                        <ul>
+                            <li><a href="#" class="contentST1">TITLE OF YOUR CONTENT PAGE</a></li>
+                            <li><a href="#" class="contentST2">BLUE TECH</a></li>
+                            <li><a href="#" class="contentST3">DIVE DEEPER</a></li>
+                            <li><a href="#" class="contentST4">SAVE THE WHALES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="team">TEAM</a></li>
+                    <li><a href="#" class="profile">MY PROFILE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="intro">
+            <h1>SHARE YOUR THOUGHTS</h1>
+        </div>
+
+    </div>
+
+    <div class="container"> 
+        <p>WE ARE COMMITTED TO CONSERVING AND SUSTAINABLY USING THE OCEANS, SEAS, AND MARINE RESOURCES FOR SUSTAINABLE DEVELOPMENT. YOUR FEEDBACK IS INVALUABLE IN SHAPING OUR EFFORTS.</p>
+   
+        <div class="section">
+            <form name="feedbackForm" action="mailto:w2008378@westminster.ac.uk?Subject=A+new+submission+has+been+received" method="post" enctype="text/plain">
+                
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name"> 
+               
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                
+                
+                    <label for="awareness">How aware are you of the issues facing our oceans and marine life?</label>
+                    <select id="awareness" name="awareness">
+                        <option value="none">---</option>
+                        <option value="very_aware">Very Aware</option>
+                        <option value="somewhat_aware">Somewhat Aware</option>
+                        <option value="not_aware">Not Aware</option>
+                    </select>
+                
+                
+                
+                    <label class="scaleLabel">Are you satisfied with our shopping service?</label>
+                    <div id="statusrow" class="row">
+                        <div class="color-text">
+                            <label for="1">1</label>
+                            <input id="1" type="radio" value="1" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="2">2</label>
+                            <input id="2" type="radio" value="2" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="3">3</label>
+                            <input id="3" type="radio" value="3" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="4">4</label>
+                            <input id="4" type="radio" value="4" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="5">5</label>
+                            <input id="5" type="radio" value="5" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="6">6</label>
+                            <input id="6" type="radio" value="6" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="7">7</label>
+                            <input id="7" type="radio" value="7" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="8">8</label>
+                            <input id="8" type="radio" value="8" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="9">9</label>
+                            <input id="9" type="radio" value="9" name="rate">
+                        </div>
+                        <div class="color-text">
+                            <label for="10">10</label>
+                            <input id="10" type="radio" value="10" name="rate">
+                        </div>
+                    </div> 
+                
+                
+                
+                    <label>Would you purchase again?</label>
+                    <div class="purchase"> 
+                        <input class="purchaseInput" type="radio" id="yes" name="purchase">
+                        <label class="purchaseLabel" for="yes">Yes</label>
+                        <input class="purchaseInput" type="radio" id="no" name="purchase">
+                        <label class="purchaseLabel" for="no">No</label>
+                    </div>    
+                                
+              
+                
+                    <label for="actions">What actions do you take to reduce your impact on marine life? (optional)</label>
+                    <textarea id="actions" name="actions" rows="3"></textarea>
+                
+                
+                
+                    <label for="threats">What are the most pressing threats to marine biodiversity? (optional)</label>
+                    <textarea id="threats" name="threats" rows="3"></textarea>
+                
+                
+                
+                    <label for="suggestions">Do you have any suggestions for initiatives to protect marine environments? (optional)</label>
+                    <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+                
+                    <input type="button" value="Submit Feedback" class="submitButton" onclick="validateForm()">
+
+                <div id="preview"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>&#169; 2024 Life Below Water</p>
+        <a href="https://w2115863.users.ecs.westminster.ac.uk/fames/pageEditor_ST3.html" target="_blank" class="pageEditor">Page Editor</a>
+    </div>
+
+    <script src="navbar.js"></script>
+
+    <script>
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
+            return re.test(email);
+        }
+    
+        function clearErrors() {
+            document.querySelectorAll('.error').forEach(el => el.remove());
+            document.querySelectorAll('.highlight').forEach(el => el.classList.remove('highlight'));
+        }
+    
+        function displayError(input, message) {
+            const error = document.createElement('div');
+            error.className = 'error';
+            error.textContent = message;
+            input.classList.add('highlight');
+            input.parentNode.insertBefore(error, input.nextSibling);
+        }
+    
+        function validateForm() {
+            clearErrors();
+    
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            let valid = true;
+    
+            if (!name.value) {
+                displayError(name, 'Name is required.');
+                valid = false;
+            }
+    
+            if (!email.value || !validateEmail(email.value)) {
+                displayError(email, 'Please enter a valid email address.');
+                valid = false;
+            }
+    
+            if (valid) {
+                previewForm(); 
+            }
+        }
+    
+        function previewForm() {
+            const preview = document.getElementById('preview');
+            preview.innerHTML = ''; 
+            preview.style.display = 'block';
+    
+            const formElements = document.forms['feedbackForm'].elements;
+    
+            for (let i = 0; i < formElements.length; i++) {
+                const el = formElements[i];
+                if(el.type == 'radio' && !el.checked){
+                    continue;
+                }
+                if (el.type !== 'button') {
+                    const div = document.createElement('div');
+                    div.textContent = `${el.name}: ${el.value}`;
+                    preview.appendChild(div);
+                }
+            }
+    
+            const editBtn = document.createElement('button');
+            editBtn.textContent = 'Edit';
+            editBtn.type = 'button'; 
+            editBtn.classList.add('editButton');
+            editBtn.onclick = function() { 
+                preview.style.display = 'none';
+                
+                document.getElementById('name').scrollIntoView(); 
+            };
+            preview.appendChild(editBtn);
+
+            const submitBtn = document.createElement('button');
+            submitBtn.textContent = 'Final Submit';
+            submitBtn.classList.add('submitButton');
+            submitBtn.type = 'button'; 
+            submitBtn.onclick = finalSubmit;
+            preview.appendChild(submitBtn);
+        }
+    
+        function finalSubmit() {
+            const form = document.forms['feedbackForm'];
+            let mailtoString = 'mailto:w2115863@westminster.ac.uk?subject=A new submission has been received&body=';
+            Array.from(form.elements).forEach(el => {
+                if(el.type !== 'button' && el.value !== '' && el.type !== 'radio' || el.checked) {
+                    mailtoString += `${el.name}: ${el.value}%0D%0A`; 
+                }
+            });
+    
+            const tempLink = document.createElement('a');
+            tempLink.href = mailtoString;
+            document.body.appendChild(tempLink);
+            tempLink.click(); 
+            document.body.removeChild(tempLink); 
+    
+            form.reset(); 
+            const preview = document.getElementById('preview');
+            preview.style.display = 'none';
+    
+            alert('Thank you for your feedback!'); 
+        }
+    </script>
+    
+</body>    
+</html>
