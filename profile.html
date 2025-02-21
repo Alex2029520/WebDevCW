@@ -2,7 +2,41 @@
 <html lang="en">
 <head>
     <title>Profile</title>
+<style>
+    /*PROFILE DIV*/
+    #profile_div {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #profile_div > img {
+        --pfp_size__small: 10rem;
+        --pfp_size__large: 12rem;
+
+        margin: 1rem;
+        width: var(--pfp_size__small);
+        height: var(--pfp_size__small);
+        border: 4px solid black;
+        border-radius: 50%;
+        transition: all .2s;
+    }
+    #profile_div > img:hover {
+        width: var(--pfp_size__large);
+        height: var(--pfp_size__large);
+        margin: 0rem;
+        transition: all .2s;
+    }
+    #profile_div > p {
+        font-size: 1.8rem;
+        flex-basis: 30rem;
+        flex-grow: 3;
+    }
+</style>
 </head>
 <body>
-    
+    <div id="profile_div">
+        <img src="imgs/profile.jpg" alt="a picture of a person">
+        <p>I am a really awesome cool dude who is good at a whole bunch of things! blah blah blah</p>
+    </div>
 </body>
