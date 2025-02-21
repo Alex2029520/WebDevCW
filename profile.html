@@ -2,7 +2,99 @@
 <html lang="en">
 <head>
     <title>Profile</title>
+<style>
+
+    body{
+        
+        font-family: Arial, Helvetica, sans-serif;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    /*PROFILE DIV*/
+    #column_1 {
+        padding:.5rem;
+        display:flex;
+        flex-wrap: wrap;
+        flex-basis: 14rem;
+        align-items: center;
+        justify-content:center;
+        background-color: #9c9cff;
+        flex-direction: column;
+        margin:0;
+    }
+    #column_1 > *  {
+        margin: 0;
+        margin-top:1rem;
+    }
+    #column_1 > h1{
+    }
+    #column_1 > img {
+        --pfp_size__small: 10rem;
+        --pfp_size__large: 12rem;
+        margin-bottom: 1rem;
+        width: var(--pfp_size__small);
+        height: var(--pfp_size__small);
+        border: 4px solid black;
+        border-radius: 50%;
+        transition: all .2s;
+    }
+    #column_1 > img:hover {
+        width: var(--pfp_size__large);
+        height: var(--pfp_size__large);
+        margin: 0rem;
+        transition: all .2s;
+    }
+    #column_1 > p {
+    }
+    #column_1 > ul{
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    #progress_bar{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height:1rem;
+    }
+    #progress_bar > * {
+        background-color: green;
+        width:20%;
+        height:1rem;
+    }
+    #progress_bar > * + * {
+        background-color: rgb(255, 255, 255);
+        width:80%;
+        height:1rem;
+    }
+
+    /*STATS DIV*/
+    #column_2{
+        background-color: aqua;
+    }
+
+</style>
 </head>
 <body>
-    
+    <div id="column_1">
+        <h1>Big Richard</h1>
+        <img src="imgs/profile.jpg" alt="a picture of a person">
+        <p><i><b>"Where there's a will, there's a way"</b></i></p>
+        <ul>
+            <li>Course: Computer Science</li>
+            <li>Age: 1</li>
+            <li>2: 2</li>
+            <li>2: 2</li>
+            <li>3: 3</li>
+        </ul>
+            <h2>Skills</h2>
+            <p>Attack</p>
+            <div id="progress_bar"><div></div><div></div></div>
+    </div>
+    <div id="column_2">
+        <p>
+            example text
+        </p>
+    </div>
 </body>
