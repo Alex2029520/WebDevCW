@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Profile</title>
+<style>
+
+    body{
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    /*COLUMNS*/
+    #content{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    #column_1 {
+        padding:.5rem;
+        display:flex;
+        flex-wrap: wrap;
+        flex-basis: 14rem;
+        flex-grow:1;
+        align-items: center;
+        background-color: #9c9cff;
+        flex-direction: column;
+        margin:0;
+    }
+    #column_2{
+        padding:.5rem;
+        display:flex;
+        flex-wrap: wrap;
+        flex-basis:14rem;
+        flex-grow:999;
+        align-items: center;
+        background-color: aqua;
+        flex-direction: column;
+        margin:0;
+    }
+    #column_3{
+        padding:.5rem;
+        display:flex;
+        flex-wrap: wrap;
+        flex-basis:14rem;
+        flex-grow:999;
+        align-items: center;
+        background-color: rgb(179, 255, 0);
+        flex-direction: column;
+        margin:0;
+    }
+    /*PROFILE DIV*/
+    #column_1 > *  {
+        margin: 0;
+        margin-top:1rem;
+    }
+    #column_1 > h1{
+    }
+    #column_1 > img {
+        --pfp_size__small: 10rem;
+        --pfp_size__large: 12rem;
+        margin-bottom: 1rem;
+        width: var(--pfp_size__small);
+        height: var(--pfp_size__small);
+        border: 4px solid black;
+        border-radius: 50%;
+        transition: all .2s;
+    }
+    #column_1 > img:hover {
+        width: var(--pfp_size__large);
+        height: var(--pfp_size__large);
+        margin: 0rem;
+        transition: all .2s;
+    }
+    #column_1 > p {
+    }
+    #column_1 > ul{
+        font-size: 1rem;
+        text-align: left;
+    }
+    /*PROGRESS BARS*/
+    #column_1 > dl > dt {
+        text-align: center;
+    }
+    #column_1 > dl > dd{
+        margin:0;
+        display: flex;
+        flex-direction: row;
+        min-width: 12rem;
+        width:100%;
+        height:1rem;
+    }
+    #column_1 > dl > dd > * {
+        background-color: green;
+    }
+    #column_1 > dl > dd > * + * {
+        background-color: rgb(255, 255, 255);
+        width:100%;
+        flex-shrink: 999;
+    }
+
+    /*STATS DIV*/
+    
+
+</style>
+</head>
+<body>
+
+<div id="content">
+    <div id="column_1">
+        <h1>Big Richard</h1>
+        <img src="imgs/profile.jpg" alt="a picture of a person">
+        <p><i><b>"Where there's a will, there's a way"</b></i></p>
+        <ul>
+            <li>Course: Computer Science</li>
+            <li>Age: 1</li>
+            <li>2: 2</li>
+            <li>2: 2</li>
+            <li>3: 3</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <dl>
+        <dt>Attack</dt>
+            <dd id="progress_bar"><div style="width:10%"></div><div></div></dd>
+        <dt>Defence</dt>
+            <dd id="progress_bar"><div style="width:14%"></div><div></div></dd>
+        <dt>Wisdom</dt>
+            <dd id="progress_bar"><div style="width:7%"></div><div></div></dd>
+        <dt>Charisma</dt>
+            <dd id="progress_bar"><div style="width:100%"></div><div></div></dd>
+        </dl>
+
+        <h2>Goals</h2>
+        <dl>
+        <dt>Love</dt>
+            <dd id="progress_bar"><div style="width:2%"></div><div></div></dd>
+        <dt>Fulfillment</dt>
+            <dd id="progress_bar"><div style="width:6%"></div><div></div></dd>
+        <dt>Happiness</dt>
+            <dd id="progress_bar"><div style="width:11%"></div><div></div></dd>
+        </dl>
+    </div>
+    <div id="column_2">
+        <p>
+            example text
+        </p>
+    </div>
+    <div id="column_3">
+        <p>
+            example text
+        </p>
+    </div>
+</div>
+
+</body>
