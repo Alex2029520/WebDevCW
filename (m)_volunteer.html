@@ -20,35 +20,27 @@
             max-height: 600px;
         }
 
-        .program-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
         .program-card {
             border: 1px solid #ddd;
             padding: 20px;
+            margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center; /* Vertically align image and text */
         }
 
         .program-card .image-container {
             position: relative;
             display: inline-block;
-            width: 250px; /* Adjusted image width */
-            height: 250px; /* Adjusted image height */
-            overflow: hidden;
-            margin-right: 20px; /* Spacing between image and text */
+            width: 500px; /* Match your image width */
+            height: 500px; /* Match your image height */
+            overflow: hidden; /* Prevent overlay overflow */
         }
 
         .program-card img {
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Prevents image distortion */
             transition: opacity 0.3s ease;
         }
 
@@ -63,7 +55,7 @@
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 1.2em; /* Adjusted font size */
+            font-size: 1.5em;
             opacity: 0;
             transition: opacity 0.3s ease;
             text-align: center;
@@ -85,7 +77,6 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
-            margin-top: 10px;
         }
 
         .program-card button:hover {
@@ -140,54 +131,40 @@
             </select>
         </div>
 
-        <div class="program-grid">
-            <div class="program-card">
-                <div class="image-container">
-                    <img src="imgs/VOLUNTEER (coral reef restoration).webp" alt="Coral Restoration">
-                    <div class="overlay">Learn More</div>
-                </div>
-                <div>
-                    <h2>Coral Reef Restoration Volunteer</h2>
-                    <p>Join our team to help restore damaged coral reefs. Plant coral fragments and monitor reef health.</p>
-                    <button onclick="window.location.href='#'">Learn More</button>
-                </div>
+        <div class="program-card">
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (coral reef restoration).webp" alt="Coral Restoration">
+                <div class="overlay">Learn More</div>
             </div>
+            <h2>Coral Reef Restoration Volunteer</h2>
+            <p>Join our team to help restore damaged coral reefs. Plant coral fragments and monitor reef health.</p>
+        </div>
 
-            <div class="program-card">
-                <div class="image-container">
-                    <img src="imgs/VOLUNTEER (beach cleanup).webp" alt="Beach Cleanup">
-                    <div class="overlay">Learn More</div>
-                </div>
-                <div>
-                    <h2>Beach Cleanup and Marine Debris Removal</h2>
-                    <p>Participate in beach cleanups to remove plastic and other debris, protecting marine life.</p>
-                    <button onclick="window.location.href='#'">Join Us</button>
-                </div>
+        <div class="program-card">
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (beach cleanup).webp" alt="Beach Cleanup">
+                <div class="overlay">Learn More</div>
             </div>
+            <h2>Beach Cleanup and Marine Debris Removal</h2>
+            <p>Participate in beach cleanups to remove plastic and other debris, protecting marine life.</p>
+        </div>
 
-            <div class="program-card">
-                <div class="image-container">
-                    <img src="imgs/VOLUNTEER (Marine monitoring).webp" alt="Marine Monitoring">
-                    <div class="overlay">Learn More</div>
-                </div>
-                <div>
-                    <h2>Marine Life Monitoring and Data Collection</h2>
-                    <p>Assist scientists in collecting data on marine species and their habitats. Learn about ocean ecosystems.</p>
-                    <button onclick="window.location.href='#'">Apply Now</button>
-                </div>
+        <div class="program-card">
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (Marine monitoring).webp" alt="Marine Monitoring">
+                <div class="overlay">Learn More</div>
             </div>
+            <h2>Marine Life Monitoring and Data Collection</h2>
+            <p>Assist scientists in collecting data on marine species and their habitats. Learn about ocean ecosystems.</p>
+        </div>
 
-            <div class="program-card">
-                <div class="image-container">
-                    <img src="imgs/VOLUNTEER (Education).jpg" alt="Educational Outreach">
-                    <div class="overlay">Learn More</div>
-                </div>
-                <div>
-                    <h2>Educational Outreach and Community Engagement</h2>
-                    <p>Educate the public about ocean conservation through workshops and presentations. Inspire action!</p>
-                    <button onclick="window.location.href='#'">Volunteer</button>
-                </div>
+        <div class="program-card">
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (Education).jpg" alt="Educational Outreach">
+                <div class="overlay">Learn More</div>
             </div>
+            <h2>Educational Outreach and Community Engagement</h2>
+            <p>Educate the public about ocean conservation through workshops and presentations. Inspire action!</p>
         </div>
     </section>
 
