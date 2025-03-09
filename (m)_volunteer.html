@@ -5,6 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer - Blue Tech</title>
     <link rel="stylesheet" href="global.css"> <style>
+
+        .image-container {
+            position: relative;
+            display: inline-block; /* Allows for inline image placement */
+        }
+
+        .image-container img {
+            display: block; /* Removes any extra space below the image */
+            transition: opacity 0.3s ease; /* Smooth transition */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 100, 255, 0.3); /* Light blue translucent */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5em;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease; /* Smooth transition */
+            text-align: center;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+        .image-container:hover img {
+            opacity: .7; /*Dim image on hover*/
+        }
         
         body {
             font-family: Tahoma, sans-serif;
@@ -97,21 +132,24 @@
         </div>
 
         <div class="program-card">
-            <img src="imgs/VOLUNTEER (coral reef restoration).webp" alt="Coral Restoration">
+            <img src="imgs/VOLUNTEER (coral reef restoration).webp" width="500" height="500" alt="Coral Restoration">
+            <div class="overlay">Learn More</div>
             <h2>Coral Reef Restoration Volunteer</h2>
             <p>Join our team to help restore damaged coral reefs. Plant coral fragments and monitor reef health.</p>
             <button onclick="window.location.href='#'">Learn More</button>
         </div>
 
         <div class="program-card">
-            <img src="imgs/VOLUNTEER (beach cleanup).webp" width="250" height="250" alt="Beach Cleanup">
+            <img src="imgs/VOLUNTEER (beach cleanup).webp" width="500" height="500" alt="Beach Cleanup">
+            <div class="overlay">Learn More</div>
             <h2>Beach Cleanup and Marine Debris Removal</h2>
             <p>Participate in beach cleanups to remove plastic and other debris, protecting marine life.</p>
             <button onclick="window.location.href='#'">Join Us</button>
         </div>
 
         <div class="program-card">
-            <img src="marine_monitoring.jpg" alt="Marine Monitoring">
+            <img src="marine_monitoring.jpg" width="500" height="500" alt="Marine Monitoring">
+            <div class="overlay">Learn More</div>
             <h2>Marine Life Monitoring and Data Collection</h2>
             <p>Assist scientists in collecting data on marine species and their habitats. Learn about ocean ecosystems.</p>
             <button onclick="window.location.href='#'">Apply Now</button>
