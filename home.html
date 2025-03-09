@@ -1,3 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Life Below Water</title>
+    <link rel="stylesheet" href ="websiteTemplate.css">
+
+    <style>
+        /* banner */
+        .banner {
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+            url(images/w2008378/banner.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* intro */
+        .intro {
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .intro h1 {
+            font-size: 62px;
+            color: #fff;
+        }
+
+        .intro p {
+            margin: 10px 0 10px;
+            font-size: 14px;
+            color: #fff;
+            font-weight: 900;
+            padding-bottom: 10px;
+        }
+
+        .moreButton {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 12px 34px;
+            font-size: 13px;
+            background: transparent;
+            position: relative;
+            cursor: pointer; 
+        }
+
+        .moreButton:hover {
+            border: 1px solid #005F38;
+            background: #005F38;
+            transition: 1s; 
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* goal */
+        .goal {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .goal h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #004564;
+        }
+
+        .goalCol {
+            flex-basis: 31%;
+            background: #005f38;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .goal h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+            color: #fff;
+            padding: 10px;
+        }
+
+        /* targets */
+        .targets {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .targets h1 {
+            color: #004564;
+        }
+
+        .targets p {
+            color: #347196; 
+            padding: 20px;
+        }
+
+        .targetsCol {
+            flex-basis: 31%;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .targetsCol img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .targetsCol p {
+            color: #347196;
+            padding: 10px;
+        }
+
+        .targetsCol h3 {
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #004564;
+        }
+
+        /* offers */
+        .offers {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .offers h1 {
+            color: #004564; 
+        }
+
+        .offers p {
+            color: #004564; 
+            padding: 20px;
+        }
+
+        .offersCol {
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .offersCol img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .layer {
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        .layer:hover {
+            background: rgba(0, 62.91, 37.09, 0.7);
+        }
+
+        .layer h3 {
+            width: 100%;
+            font-weight: 800;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .layer:hover h3 {
+            bottom: 49%;
+            opacity: 1;
+        }
+
+        .layer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* meet the team */
+        .meetTheTeam {
+            margin: 80px auto;
+            width: 80%;
+            height: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+            url(images/w2008378/team.avif);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .meetTheTeam h1 {
+            color: #fff;
+            margin-bottom: 40px;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- banner -->
+    <div class="banner">
+        <nav>
+            <img src="images/w2008378/logo.png" class="logo" alt="logo">
+            <div class="navLinks">
+                <ul>
+                    <li><a href="#" class="home">HOME</a></li>
+                    <li><a href="#" class="gallery">GALLERY</a></li>
+                    <li><a href="#" class="shop">SHOP</a></li>
+                    <li><a href="#" class="feedback">FEEDBACK</a></li>
+                    <li><a href="#" class="sitemap">SITEMAP</a></li>
+                    <li>
+                        <a href="#">EXPLORE FURTHER</a>
+                        <ul>
+                            <li><a href="#" class="contentST1">TITLE OF YOUR CONTENT PAGE</a></li>
+                            <li><a href="#" class="contentST2">BLUE TECH</a></li>
+                            <li><a href="#" class="contentST3">DIVE DEEPER</a></li>
+                            <li><a href="#" class="contentST4">SAVE THE WHALES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="team">TEAM</a></li>
+                    <li><a href="#" class="profile">MY PROFILE</a></li>
+                </ul>
+            </div>
+        </nav> 
+
+        <div class="intro">
+            <h1>LIFE BELOW WATER</h1>
+            <p>DISCOVER. PROTECT. SUSTAIN.</p>
+            <a href="#marker" class="moreButton">Find Out More</a>
+        </div>
+
+    </div>
+
+<!-- goal -->
+    <div class="goal">
+        <h1 id="marker">CONSERVE & SUSTAIN OCEANS</h1>
+        <div class="row">
+            <div class="goalCol">
+                <h3>Oceans and seas are crucial to our survival, covering 70% of the Earth's surface and serving as vital sources of food, energy, and water.</h3>
+            </div>
+            <div class="goalCol">
+                <h3>All marine ecosystems are harmfully affected by human activities throughout the years. It is the time to take action. Time for change.</h3>
+            </div>
+            <div class="goalCol">
+                <h3>To preserve and sustain ocean health, it is imperative to stop pollution, end overfishing, and initiate projects to conserve of marine biodiversity globally.</h3>
+            </div>
+        </div>
+    </div>
+
+<!-- targets -->
+    <div class="targets">
+        <h1>TARGETS FOR THE SUSTAINABLE GOAL</h1>
+        <p>These objectives define the ultimate goals we must achieve to sustain ocean conservation effectively.</p>
+
+        <div class="row">
+            <div class="targetsCol">
+                <img src="images/w2008378/14.1.avif" alt="goal14.1">
+                <h3>REDUCE MARINE POLLUTION</h3>
+                <p>Implement stricter regulations on waste disposal to prevent pollutants from entering marine environments.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.2.jpeg" alt="goal14.2">
+                <h3>PROTECT AND RESTORE ECOSYSTEMS</h3>
+                <p>Launch large-scale coral reef restoration projects to rejuvenate damaged reefs.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.3.webp" alt="goal14.3">
+                <h3>REDUCE OCEAN ACIDIFICATION</h3>
+                <p>Promote renewable energy sources to decrease carbon emissions.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.4.jpeg" alt="goal14.4">
+                <h3>SUSTAINABLE FISHING</h3>
+                <p>Enforce catch limits based on scientific assessments to ensure fish populations are harvested at sustainable rates.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.5.jpeg" alt="goal14.5">
+                <h3>CONSERVE COASTAL AND MARINE AREAS</h3>
+                <p>Establish marine protected areas where fishing and drilling are prohibited.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="targetsCol">
+                <img src="images/w2008378/14.6.jpeg" alt="goal14.6">
+                <h3>END SUBSIDIES CONTRIBUTING TO OVERFISHING</h3>
+                <p>Reform financial policies to eliminate subsidies for fishing practices that contribute to overexploitation.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.7.jpeg" alt="goal14.7">
+                <h3>SUSTAINABLE USE OF MARINE RESOURCES</h3>
+                <p>Encourage the development and use of marine biotechnology that allows for the sustainable extraction of marine resources.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.8.jpeg" alt="goal14.8">
+                <h3>INCREASE RESEARCH TECHNOLOGY FOR OCEAN HEALTH</h3>
+                <p>Fund and promote the development of advanced oceanographic research technology.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.9.jpeg" alt="goal14.9">
+                <h3>SUPPORT SMALL SCALE FISHERS</h3>
+                <p>Provide training and resources to small-scale fishers for adopting sustainable fishing practices.</p>
+            </div>
+            <div class="targetsCol">
+                <img src="images/w2008378/14.A.jpeg" alt="goal14.A">
+                <h3>ENFORCE INTERNATIONAL SEA LAW</h3>
+                <p>Strengthen international cooperation to ensure the protection of marine environments.</p>
+            </div>
+        </div>
+    </div>
+
+<!-- offers -->
+    <div class="offers">
+        <h1>EXPLORE. ENGAGE. TRANSFORM.</h1>
+
+        <div class="row">
+           <div class="offersCol">
+               <img src="images/w2008378/gallery.avif" alt="turtle">
+               <div class="layer"> 
+                   <h3><a href="https://w2029520.users.ecs.westminster.ac.uk/fames/gallery.html">GALLERY</a></h3>
+               </div>
+           </div>
+           <div class="offersCol">
+               <img src="images/w2008378/shop.avif" alt="ecoFriendlyProducts">
+               <div class="layer">
+                   <h3><a href="https://w2025069.users.ecs.westminster.ac.uk/fames/shop.html">SHOP</a></h3>
+               </div>
+           </div>
+           <div class="offersCol">
+               <img src="images/w2008378/feedback1.avif" alt="fish">
+               <div class="layer">
+                   <h3><a href="https://w2008378.users.ecs.westminster.ac.uk/fames/feedback.html">FEEDBACK</a></h3>
+               </div>
+           </div>
+       </div>    
+   </div>
+
+<!-- meet the team -->
+    <div class="meetTheTeam">
+        <h1>GET TO KNOW THE TEAM BETTER</h1>
+        <a href="https://w1992664.users.ecs.westminster.ac.uk/fames/team.html" class="moreButton">Dive Deeper</a>
+    </div>
+
+<!-- footer -->
+    <div class="footer">
+        <p>&#169; 2024 Life Below Water</p>
+        <a href="https://w2008378.users.ecs.westminster.ac.uk/fames/pageEditor_ST2.html" target="_blank" class="pageEditor">Page Editor</a>
+    </div>
+
+    <script src="navbar.js"></script>
+</body>
+
+</html>
