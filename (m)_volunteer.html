@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer - Blue Tech</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        /* Setting background color */
+        body {
+            font-family: Tahoma, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: rgb(21, 38, 66);
+            color: #fff;
+        }
+
+        #volunteer-programs {
+            padding: 20px;
+            overflow-y: auto;
+            max-height: 600px;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .program-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .program-card .image-container {
+            position: relative;
+            display: inline-block;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .program-card img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .program-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 100, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+        /* adjusting the opacity of the when user hovers over each image */
+        .program-card .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .program-card .image-container:hover img {
+            opacity: 0.7;
+        }
+        /* drop down box */
+        #sort-dropdown {
+            margin-bottom: 20px;
+        }
+
+        #ratings-reviews {
+            padding: 20px;
+        }
+
+        .rating-summary {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .review-card {
+            border: 1px solid #eee;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .review-card h3 {
+            margin-top: 0;
+        }
+
+        .review-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(15, 27, 48); /* Darker blue footer */
+        }
+    </style>
+</head>
+<body>
+ <!-- Providing drop down box filter options -->
+    <section id="volunteer-programs">
+        <div id="sort-dropdown">
+            <select>
+                <option>Most Popular</option>
+                <option>Newest</option>
+                <option>Location</option>
+            </select>
+        </div>
+
+        <div class="program-grid">
+            <!-- organising images into a grid formation -->
+            <div class="program-card">
+                <div class="image-container">
+                    <img src="imgs/VOLUNTEER (coral reef restoration).webp" alt="Coral Restoration">
+                    <!-- image link and description incasae image doesnt display -->
+                    <div class="overlay">Learn More</div>
+                    <!-- Displays "Learn More" ontop of the image that is hovered over -->
+                </div>
+                <div>
+                    <h2>Coral Reef Restoration Volunteer</h2>
+                    <p>Join our team to help restore damaged coral reefs. Plant coral fragments and monitor reef health.</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="image-container">
+                    <img src="imgs/VOLUNTEER (beach cleanup).webp" alt="Beach Cleanup">
+                    <!-- image link and description incasae image doesnt display -->
+                    <div class="overlay">Learn More</div>
+                </div>
+                <div>
+                    <h2>Beach Cleanup and Marine Debris Removal</h2>
+                    <p>Participate in beach cleanups to remove plastic and other debris, protecting marine life.</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="image-container">
+                    <img src="imgs/VOLUNTEER (Marine monitoring).webp" alt="Marine Monitoring">
+                    <!-- image link and description incasae image doesnt display -->
+                    <div class="overlay">Learn More</div>
+                </div>
+                <div>
+                    <h2>Marine Life Monitoring and Data Collection</h2>
+                    <p>Assist scientists in collecting data on marine species and their habitats. Learn about ocean ecosystems.</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="image-container">
+                    <img src="imgs/VOLUNTEER (Education).jpg" alt="Educational Outreach">
+                    <!-- image link and description incasae image doesnt display -->
+                    <div class="overlay">Learn More</div>
+
+                </div>
+                <div>
+                    <h2>Educational Outreach and Community Engagement</h2>
+                    <p>Educate the public about ocean conservation through workshops and presentations. Inspire action!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ratings-reviews">
+        <div class="rating-summary">
+            <h2>8.9/10 Exceptional</h2>
+            <p>Based on 780 reviews</p>
+        </div>
+
+        <div class="review-card">
+            <h3>Amazing Experience!</h3>
+            <p>I had a fantastic time volunteering with the coral restoration project. It was very rewarding. <a href="#">See More</a></p>
+            <p>John Doe - 2023-11-15 - Rating: ★★★★★</p>
+        </div>
+
+        <div class="review-card">
+            <h3>Great Organization</h3>
+            <p>The beach cleanup was well-organized and made a real difference. Highly recommend! <a href="#">See More</a></p>
+            <p>Jane Smith - 2023-11-10 - Rating: ★★★★☆</p>
+        </div>
+    </section>
+
+    <footer>
+        <!-- footer with button that leads to the page editor -->
+        <div id="splash-content">
+            <h1>Blue Tech</h1>
+            <button class="splash-button" onclick="window.location.href='(m)_pageEditor_ST1.html'">Page Editor</button>
+        </div>
+    </footer>
+
+</body>
+</html>

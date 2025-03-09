@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page Editor</title>
+
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .row .column {
+            width: 33.333%;
+            padding: 5px;
+            border-right: 1px solid black;
+        }
+
+        .row .column:last-child {
+            border-right: none;
+        }
+
+        .row .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row .column .header,
+        .row .column .text {
+            padding: 10px;
+        }
+
+        .row .column .button {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .buttonStyle {
+            display: block;
+            width: fit-content;
+            margin: 10px auto;
+            text-decoration: none;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 34px;
+            font-size: 13px;
+            background-color: #5768d2;
+            cursor: pointer; 
+        }
+
+        .buttonStyle:hover {
+            background: #014c8f;
+            transition: 1s; 
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>Page Editor</h1>
+
+    <div class="role">
+        <hr>
+        <p><b>Name:</b> Waleed Dustgir</p>
+        <p><b>Role:</b> Student 2</p>
+        <p><i>Done By Me</i></p>
+        <hr>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="header">
+                <h3>Home Page</h3>
+            </div>
+            <div class="text">   
+                <ul>
+                    <li>Created the html page containing 14th Sustainable Development Goal.</li>
+                    <li>Attempted to create a navbar linking pages together.
+                        <ul>
+                            <li>Used JavaScript for clicking the navbar and it being active </li>
+                            <li>Used CSS to design the hover of the navbar.</li>
+                        </ul>
+                    </li>    
+                    <li>Created links to content in the homepage.</li>
+                    <li>Created the external CSS website template so the team members can implement it in there work so the website can be coherent.</li>
+                </ul>
+            </div>
+            <div class="button">
+                <a href="https://w2113683.users.ecs.westminster.ac.uk/fames/home.html" target="_blank" class="buttonStyle">Link to Home Page</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="header">
+                <h3>Feedback</h3>
+            </div>
+            <div class="text">   
+                <ul>
+                    <li>Developed a feedback form for the website.</li>
+                    <li>The submit button does send an email to the correct address.</li>
+                    <li>Used different types of fields to present different html skills.</li>
+                    <li>Implemented CSS to design the page and make it coherent with the home page.</li>
+                </ul>
+            </div>
+            <div class="button">
+                <a href="https://w2113683.users.ecs.westminster.ac.uk/fames/feedback.html" target="_blank" class="buttonStyle">Link to Feedback Form</a>
+            </div>
+        </div>
+        <div class="column">
+            <div class="header">
+                <h3>OceanX</h3>
+            </div>
+            <div class="text">   
+                <ul>
+                    <li>Created the content page on innovative technologies that aid in ocean conservation.</li>
+                    <li>Created buttons that is linked to each section of the website.</li>
+                    <li>Used JavaScript and CSS I was able to create a "Go to Top" button.</li>
+                </ul>
+            </div>
+            <div class="button">
+                <a href="https://w2113683.users.ecs.westminster.ac.uk/fames/content_ST2.html" target="_blank" class="buttonStyle">Link to Content Page</a>
+            </div>
+        </div>
+    </div>
+</body>

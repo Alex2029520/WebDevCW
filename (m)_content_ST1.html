@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean Content Page</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: rgb(21, 38, 66);
+            color: #fff;
+        }
+        /* making sure the navigation bar stays at the top of the screen */
+        nav {
+            position: sticky; 
+            top: 0;
+            background-color: rgb(15, 27, 48);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 100; 
+        }
+        
+        /* nav bar color and width */
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+        }
+        /* positioning of the go to the top button */
+        #go-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        /* section line width and color */
+        section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(15, 27, 48); /* Darker blue footer */
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#ocean-life">Ocean Life Preservation</a>
+        <a href="#pollution">Ocean Pollution</a>
+        <a href="#overfishing">Overfishing</a>
+        <a href="#climate-change">Climate Change and Oceans</a>
+    </nav>
+    <!-- sends user to the top of the page -->
+    <a href="#top" id="go-to-top">Go to Top</a>
+
+    <!-- dividing the groups of text into split sections -->
+    <section id="ocean-life">
+        <h2>Ocean Life Preservation</h2>
+     <!-- adjusting image properties (size) -->
+        <img src="imgs/ocean life.jpg" width="700" height="500" alt="Diverse marine life in a coral reef.">
+        <p>Ocean life is incredibly diverse, from microscopic plankton to massive whales. Preservation efforts are crucial to maintain this biodiversity. Marine protected areas, sustainable fishing practices, and reducing pollution are key strategies. Protecting coral reefs, which are vital habitats, is also essential. </p>
+        <p>Many organizations work tirelessly to protect endangered species and restore damaged ecosystems. Individual actions, such as reducing plastic use and supporting sustainable seafood, can also make a significant impact.</p>
+    </section>
+
+    <section id="pollution">
+        <h2>Ocean Pollution</h2>
+        <img src="imgs/pollution.jpg" width="700" height="500" alt="Plastic debris floating in the ocean.">
+        <p>Ocean pollution, particularly plastic waste, is a major threat to marine life. Plastics break down into microplastics, which are ingested by marine animals, causing harm and even death. Chemical pollutants from industrial and agricultural runoff also contaminate the ocean, affecting water quality and marine ecosystems. </p>
+        <p>Reducing plastic consumption, proper waste disposal, and implementing stricter regulations on industrial discharges are crucial steps in combating ocean pollution.</p>
+    </section>
+
+    <section id="overfishing">
+        <h2>Overfishing</h2>
+        <img src="imgs/over fishing.jpg" width="700" height="500" alt="Empty fishing nets on a boat.">
+        <p>Overfishing occurs when fish are caught faster than they can reproduce, leading to population declines and ecosystem imbalances. This practice disrupts food chains and affects the livelihoods of coastal communities. Sustainable fishing practices, such as catch limits, protected areas, and responsible fishing gear, are necessary to ensure healthy fish populations. </p>
+        <p>Consumers can support sustainable fisheries by choosing seafood from certified sources and avoiding overexploited species.</p>
+    </section>
+
+    <section id="climate-change">
+        <h2>Climate Change and Oceans</h2>
+        <img src="imgs/climate change.jpg" width="700" height="500" alt="Melting icebergs and rising sea levels.">
+        <p>Climate change is causing significant impacts on the oceans, including rising sea levels, ocean acidification, and changes in water temperature. Ocean acidification, caused by increased carbon dioxide absorption, affects the ability of marine organisms to form shells and skeletons. Rising temperatures lead to coral bleaching and alter marine species distributions. </p>
+        <p>Reducing greenhouse gas emissions and transitioning to renewable energy sources are critical to mitigating the effects of climate change on the oceans.</p>
+    </section>
+    <!-- footer which holds button to page editor -->
+    <footer>
+        <div id="splash-content">
+            <h1>Blue Tech</h1>
+            <button class="splash-button" onclick="window.location.href='(m)_pageEditor_ST1.html'">Page Editor</button>
+        </div>
+    </footer>
+
+</body>
+</html>

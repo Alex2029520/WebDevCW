@@ -1,3 +1,401 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UnderTheSea</title>
+    <link rel="stylesheet" href ="websiteTemplate.css">
+
+    <style>
+    
+        .banner {
+            height: 100vh; 
+            width: 100%;
+            background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+            url(images/w2113683/banner.jpg);
+            background-size: cover;
+            position: relative;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            overflow: hidden; 
+        }
+       
+        .intro {
+            max-width: 80%; 
+            color: rgba(255, 255, 255, 0.9); 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px; 
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+        }
+
+        .intro h1 {
+            font-size: 62px;
+            color: #fffffff5;
+        }
+
+        .intro p {
+            margin: 10px 0 10px;
+            font-size: 14px;
+            color: #fffffff5;
+            font-weight: 900;
+            padding-bottom: 10px;
+        }
+
+        .actionmoreButton {
+            display: inline-block;
+            text-decoration: none;
+            color: #fffffff5;
+            border: 2px solid #fffffff5;
+            padding: 10px 32px;
+            font-size: 14px;
+            background-color: transparent;
+            position: relative;
+            cursor: pointer; 
+        }
+
+        .actionButton:hover {
+            border-color: 1px solid #f90074;
+            background-color: #f90074;
+            transition: 1s; 
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* goal */
+        .aim {
+            max-width: 80%;
+            margin: 0  auto;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .aim h1 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #004464;
+            margin-bottom:20px;
+            text-transform: uppercase;
+        }
+
+        .card {
+            flex-basis: 30%;
+            background: #f90074;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            padding: 25px;
+            box-sizing: border-box; 
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: transforms 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            filter: drop-shadow(0 12px 24px  rgba(0, 0, 0, 0.2));
+    
+        }  
+
+        .aim h3 {
+            text-align: center;
+            font-weight: 700;
+            margin: 15px 0;
+            color:  #fffffff5;
+            padding: 15px;
+            background-color:  rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        /* targets */
+        .objectives {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px 0;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.1);
+        }
+
+        .objectives  h1 {
+            color: #003366
+
+        }    
+          
+        .objectvies  div {
+            color: #3a7ca5; 
+            padding: 20px;
+        }
+      
+        .objectivesCard {
+            flex-basis: 31%;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .objectivesCard img {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow:0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+
+        }
+        .objectivesCard div {
+            color: #3a7ca5; 
+            padding: 10px;
+        }
+        
+        .objectivesCard h3 {
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #003366
+        }
+
+        .promotions {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .promotions h1 {
+            color: #004564; 
+        }
+
+        .promotions div{
+            color: #004564; 
+            padding: 20px;
+        }
+
+        .promotionsCard {
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promotionsCard img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.5s;
+        }
+
+        .overlay:hover {
+            background: rgba(0, 62.91, 37.09, 0.7);
+        }
+
+        .overlay h3 {
+            width: 100%;
+            font-weight: 800;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .overlay:hover h3 {
+            bottom: 49%;
+            opacity: 1;
+        }
+
+        .overlay a {
+            color: #fffffff5;
+            text-decoration: none;
+        }
+
+        /* meet the team */
+        .Theteam {
+            margin: 80px auto;
+            width: 80%;
+            height: 100%;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+            url(images/w2113683/team.avif);
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .TheTeam h1 {
+            color: #ffffffe5;
+            margin-bottom: 40px;
+            padding: 0;
+        }
+    </style>
+
+</style>
+</head>
+<body>
+
+    <!-- banner -->
+    <div class="banner">
+        <nav>
+            <img src="images/w2008378/logo.png" class="logo" alt="logo">
+            <div="navLinks">
+                <ul>
+                    <li><a href="home.html" class="active">HOME</a></li>
+                    <li><a href="gallery">GALLERY</a></li>
+                    <li><a href="shop">SHOP</a></li>
+                    <li><a href="feedback">FEEDBACK</a></li>
+                    <li><a href="sitemap">SITEMAP</a></li>
+                    <li>
+                        <a href="#">EXPLORE FURTHER</a>
+                        <ul>
+                            <li><a href="#" class="contentST1">Ocean Content Page</a></li>
+                            <li><a href="#" class="contentST2">OceanX</a></li>
+                            <li><a href="#" class="contentST3">Explore deeper</a></li>
+                            <li><a href="#" class="contentST4">SAVE THE WHALES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="team">TEAM</a></li>
+                    <li><a href="#" class="profile">MY PROFILE</a></li>
+                </ul>
+            </div>
+        </nav> 
+
+        <div class="intro">
+            <h1>UnderTheSea</h1>
+            <p>DISCOVER. PROTECT. SUSTAIN.</p>
+            <a href="#marker" class="moreButton">Find Out More</a>
+        </div>
+
+    </div>
+
+    <!-- goal -->
+    <div class="aim">
+        <h1 id="marker">Protect&Preserve OCEANS</h1>
+        <div class="row">
+            <div class=".card">
+                <h3>Rivers and lakes are crucial to our survival, covering a significant portion of the Earths surface and serving as vital sources of freshwater, food, and energy.</h3>
+            </div>
+            <div class=".card">
+                <h3>Human activities have been damaging marine ecosystems for years. Now is the time to take action and make a change.</h3>
+            </div>
+            <div class=".card">
+                <h3>To preserve and sustain ocean health, it is imperative to stop pollution, end overfishing, and initiate projects to conserve of marine biodiversity globally.</h3>
+            </div>
+        </div>
+    </div>
+   
+    <div class="objectives">
+        <h1>Sustainable Development Project </h1>
+        <p>These goals set the foundation for preserving and protecting our oceans for the future.</p>
+
+        <div class="row">
+            <div class="objectivesCard">
+                <img src="" alt="objectives1">
+                <h3>REDUCE  POLLUTION</h3>
+                <p>Strict regulations on waste disposal preventing pollutants from entering environments.</p>
+            </div>
+            <div class="objectivesCard">
+                <img src="" alt="objectives2">
+                <h3>Preserve and Revitalize Natural Habitats”</h3>
+                <p>Initiate large-scale coral reef restoration efforts to revive and rebuild damaged reef ecosystems.</p>
+            </div>
+            <div class="objectivesCard">
+                <img src="" alt="objectives3">
+                <h3>REDUCE OCEAN CONTAMINATION</h3>
+                <p>Increase use of renewable energy resources to decrease carbon pollutants.</p>
+            </div>
+            <div class="objectivesCard">
+                <img src="" alt="objectives4">
+                <h3>SUSTAINABLE FISHING</h3>
+                <p>Implement catch limits based on scientific evaluations to ensure that fish populations are harvested at sustainable levels.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="objectivesCard">
+                <img src="images/" alt="objectives5">
+                <h3>Responsible Management of Marine Resources”</h3>
+                <p>“Promote marine biotechnology innovations for the sustainable and responsible extraction of ocean resources.</p>
+            </div>
+            <div class="objectivesCard">
+                <img src="images/" alt="objectives6">
+                <h3>Research tecnology for the ocean/h3>
+                <p>Support and promote the advancemnts of cutting-edge oceonogrphic reasearch and tech.</p>
+                </div>
+            <div class="objectivesCard">
+                <img src="images/" alt="objectives7">
+                <h3>INTERNATIONAL Ocean LAW</h3>
+                <p>Enhancing international collaboration is crucial for safeguarding marine environments. Recent initiatives underscore the global commitment to this cause.</p>
+        </div>
+    </div>
+</div>
+
+<div class="promotions">
+    <h1>Join the Movement</h1>
+    <p>Get involved in our campaigns and projects to help protect and preserve our oceans.</p>
+
+    <div class="row">
+        <div class="promotionsCard">
+            <img src="images/w2113683/1.jpg" alt="promotions1">
+            <div class="overlay">
+                <h3><a href="#">JOIN US</a></h3>
+            </div>
+        </div>
+        <div class="promotionsCard">
+            <img src="images/w2113683/2.jpg" alt="promotions2">
+            <div class="overlay">
+                <h3><a href="#">DONATE</a></h3>
+            </div>
+        </div>
+        <div class="promotionsCard">
+            <img src="images/w2113683/3.jpg" alt="promotions3">
+            <div class="overlay">
+                <h3><a href="#">VOLUNTEER</a></h3>
+            </div>
+        </div>
+    </div>
+      
+ <!-- meet the team -->
+    <div class="TheTeam">
+        <h1>Meet the Team</h1>
+        <p>Our team is dedicated to protecting and preserving our oceans for future generations.</p>
+        <div class="row">
+            <div class="teamCard">
+                <img src="images/w2113683/team1.jpg" alt="team1">
+                <h3>Ibrahim</h3>
+                <p>CEO</p>
+            </div>
+            <div class="teamCard">
+                <img src="images/w2113683/team2.jpg" alt="team2">
+                <h3>Alex</h3>
+                <p>Project Manager</p>
+            </div>
+            <div class="teamCard">
+                <img src="images/w2113683/team3.jpg" alt="team3">
+                <h3>Sideny</h3>
+                <p>Researcher</p>
+            </div>
+        </div>
