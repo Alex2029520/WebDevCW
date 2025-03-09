@@ -7,7 +7,7 @@
     <link rel="stylesheet" href ="websiteTemplate.css">
 
   <style>
-       /* banner */
+       
        .banner {
            min-height: 80vh;
            width: 100%;
@@ -18,45 +18,54 @@
            position: absolute;
         }
 
-        /* intro */
+        
         .intro {
             width: 80%;
-            color: #fff;
+            color: #ffffffd5;
             position: relative;
-            top: 40%;
-            left: 40%;
+            top: 35%;
+            left: 35%;
             transform: translate(-50%, -50%);
             text-align: center;
         }
 
         .intro h1 {
             font-size: 50px;
-            color: #fff;
+            color: #fffffff5;
             padding-top: 20px;
             text-align: center;
         }
 
-        .DeepBlueSystems {
+        .OceanX {
             flex: 65%; 
             padding-right: 20px;
         }
 
-        .DeepBlueSystem   {
+        .OceanXContainer {
             display: flex; 
             flex-direction: row; 
-            align-items: flex-start;  
-            justify-content: space-around;  
-            padding: 20px;  
-            max-width: 1100px;  
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px; 
+            max-width: 1200px;
             margin: 0 auto;
         }
-
-        .DeepBlueSystem p {
+        
+        .OceanX h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #004564;
+            text-align: center;
+         }
+         
+         .OceanX p {
             color: #347196;
             margin-top: 15px; 
             text-align: center;
             vertical-align:middle;
         }
+
+        
 
         .buttonGroup {
             display: flex;
@@ -128,11 +137,175 @@
         }
 
         .imageStyle img {
-             width: 100%; /* Changed from max-width to width */
+             width: 100%; 
              height: auto;
              border-radius: 10px;
              box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-   }
+        }
+
+        .textStyle {
+            flex: 1; 
+            padding: 20px; 
+        }
+
+        .topButton {
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 1000; 
+            padding: 10px 20px; 
+            background-color: #005F38; 
+            color: #ffffff;
+            text-align: center; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            opacity: 0.7; 
+            transition: opacity 0.3s; 
+        }
+
+        .textStyle h1 {
+            text-align: center; 
+            margin-bottom: 20px; 
+            color: #004564;
+        }
+
+        .textStyle p {
+            text-align: justify; 
+            line-height: 1.6;
+            color: #347196;
+        }
+        
+        .topButton:hover {
+            opacity: 1; 
+        }
+    </style>
+    
+</head>
+
+<body>
+
+     <!-- nav bar -->
+    <div class="banner">
+        <nav>
+            <img src="images/w2008378/logo.png" class="logo" alt="logo">
+            <div class="navLinks">
+                <ul>
+                    <li><a href="#" class="home">HOME</a></li>
+                    <li><a href="#" class="gallery">GALLERY</a></li>
+                    <li><a href="#" class="shop">SHOP</a></li>
+                    <li><a href="#" class="feedback">FEEDBACK</a></li>
+                    <li><a href="#" class="sitemap">SITEMAP</a></li>
+                    <li>
+                        <a href="#">EXPLORE FURTHER</a>
+                        <ul>
+                            <li><a href="#" class="contentST1">TITLE OF YOUR CONTENT PAGE</a></li>
+                            <li><a href="#" class="contentST2">BLUE TECH</a></li>
+                            <li><a href="#" class="contentST3">DIVE DEEPER</a></li>
+                            <li><a href="#" class="contentST4">SAVE THE WHALES</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="team">TEAM</a></li>
+                    <li><a href="#" class="profile">MY PROFILE</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="intro">
+            <h1>BLUE TECH</h1>
+        </div>
+    </div>
+
+    <div class="oceanTechContainer">
+        <div class="oceanTech">
+            <h1>INTRODUCTION TO OCEAN TECHNOLOGY</h1>
+            <p>In this page, we explore the profound impact technology has to protect marine environments. The world's oceans faces several threats such as pollution, overfishing, 
+                and climate change. Amidst these challenges, technology emerges as a ray of hope, offering innovative solutions to these pressing issues. We delve into how recent technological
+                advancements have revolutionized our approach to ocean conservation, enabling us to monitor, comprehend and preserve the intricate ecosystems below the water.</p>
+        </div>
+        <div class="buttonGroup">
+            <a href="#satellite" class="button">SATELLITE & REMOTE SENSING</a>
+            <a href="#robotics" class="button">ROBOTICS & AI IN THE OCEAN</a>
+            <a href="#renewable" class="button">RENEWABLE ENERGY AND THE SEA</a>
+            <a href="#future" class="button">THE FUTURE OF OCEAN CONSERVATION</a>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="imageStyle">
+            <img src="images/w2008378/satellite.jpeg" alt="satellite">
+        </div>
+        <div class="textStyle">
+            <h1 id="satellite">SATELLITE & REMOTE SENSING</h1>
+            <p>Satellites and remote sensing technologies have transformed the landscape of environmental monitoring, particularly in the vast and often inaccessible expanses of our oceans. 
+                By providing a comprehensive bird's-eye view, these technologies enable scientists and researchers to observe large oceanic areas. This capability is crucial for tracking 
+                changes in marine environments, which can range from natural phenomena like coral bleaching and algal blooms to human induced effects such as illegal fishing activities and 
+                marine pollution. The use of such advanced technology allows for real-time monitoring and assessment of ocean health, facilitating timely interventions and informed 
+                policy-making to protect these critical ecosystems.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="imageStyle">
+            <img src="images/w2008378/robotics.jpeg" alt="robotics">
+        </div>
+        <div class="textStyle">
+            <h1 id="robotics">ROBOTICS & AI IN THE OCEAN</h1>
+            <p>The integration of robotics and artificial intelligence into the advancement of ocean technology has revolutionized our understanding of the world's oceans. Autonomous 
+                underwater vehicles (AUVs) and remotely operated vehicles (ROVs) are key players in this transformation, offering unprecedented capabilities in mapping the seabed, 
+                conducting detailed studies of marine ecosystems, and tracking pollution levels with precision. These robotics explorers, equipped with sensors and cameras, navigate 
+                the depths, often reaching areas that were previously thought inaccessible. Furthermore, AI algorithms are making sense of the colossal volumes of data collected from 
+                these missions. By analyzing patterns and trends within this data, it aids in a more proactive approach to ocean conservation.</p>
+        </div>
+    </div>
+
+    <div class="container1">
+        <div class="imageStyle">
+            <img src="images/w2008378/renewable.jpeg" alt="renewableEnergy">
+        </div>
+        <div class="textStyle">
+            <h1 id="renewable">RENEWABLE ENERGY AND THE SEA</h1>
+            <p>The vast and dynamic expanse of the sea offers more than its serene beauty and biodiversity; it stands as a promising future for renewable energy. Offshore wind turbines, 
+                towering structures that capture the relentless winds above the waves, have become increasingly prevalent. Alongside these, wave energy converters and tidal energy 
+                generators harness the motion of the sea, converting it into a sustainable power source. These technologies are developed with a keen awareness of their environmental 
+                footprint, aiming to integrate into marine ecosystems with minimal disruption. As engineers and scientists innovate, they tread carefully, ensuring that the pursuit of 
+                clean energy harmonizes with the preservation of our oceanic treasures.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="imageStyle">
+            <img src="images/w2008378/future.jpg" alt="future">
+        </div>
+        <div class="textStyle">
+            <h1 id="future">THE FUTURE OF OCEAN CONSERVATION</h1>
+            <p>The future of ocean conservation holds immense promise as we stand on the brink of new advanced technologies that can help redefine our approach to preserving marine 
+                ecosystems. The emerging field of marine biotechnology is set to unlock solutions, harnessing the ocean's biodiversity for sustainable development and conservation efforts. 
+                Not to mention, advancements in biodegradable materials are on the horizon, offering a beacon of hope in the battle against plastic pollution, one of the most known threats 
+                to our oceans. Moreover, the integration artificial intelligence is transforming to mitigate environmental threats, enabling more precise and effective conservation strategies. 
+                These advancements, together, will open an opportunity of a new era of ocean conservation.</p>
+        </div>
+    </div>
+
+    <a href="#" class="topButton">Go to Top</a>
+
+    <!-- footer -->
+    <div class="footer">
+        <p>&#169; 2024 Life Below Water</p>
+        <a href="https://w2008378.users.ecs.westminster.ac.uk/fames/pageEditor_ST2.html" target="_blank" class="pageEditor">Page Editor</a>
+    </div>
+
+    <script src="navbar.js"></script>
+
+    <script>
+        document.querySelector('.topButton').addEventListener('click', function(e) {
+            e.preventDefault(); 
+            window.scrollTo({ top: 0, behavior: 'smooth' }); 
+        });
+    </script>
+</body>
+        
+        
 
 
 
