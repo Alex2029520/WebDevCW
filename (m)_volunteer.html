@@ -4,55 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Volunteer - Blue Tech</title>
-    <link rel="stylesheet" href="global.css"> <style>
-
-        .image-container {
-            position: relative;
-            display: inline-block; /* Allows for inline image placement */
-        }
-
-        .image-container img {
-            display: block; /* Removes any extra space below the image */
-            transition: opacity 0.3s ease; /* Smooth transition */
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 100, 255, 0.3); /* Light blue translucent */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1.5em;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.3s ease; /* Smooth transition */
-            text-align: center;
-        }
-
-        .image-container:hover .overlay {
-            opacity: 1; /* Show overlay on hover */
-        }
-
-        .image-container:hover img {
-            opacity: .7; /*Dim image on hover*/
-        }
-        
+    <link rel="stylesheet" href="global.css">
+    <style>
         body {
             font-family: Tahoma, sans-serif;
             line-height: 1.6;
             margin: 20px;
-            background-color:rgb(21, 38, 66);
+            background-color: rgb(21, 38, 66);
             color: #fff;
         }
 
         #volunteer-programs {
             padding: 20px;
             overflow-y: auto;
-            max-height: 600px; 
+            max-height: 600px;
         }
 
         .program-card {
@@ -63,10 +28,45 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        .program-card .image-container {
+            position: relative;
+            display: inline-block;
+            width: 500px; /* Match your image width */
+            height: 500px; /* Match your image height */
+            overflow: hidden; /* Prevent overlay overflow */
+        }
+
         .program-card img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Prevents image distortion */
+            transition: opacity 0.3s ease;
+        }
+
+        .program-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 100, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5em;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+        }
+
+        .program-card .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .program-card .image-container:hover img {
+            opacity: 0.7;
         }
 
         .program-card button {
@@ -112,12 +112,12 @@
             color: #007bff;
             text-decoration: none;
         }
+
         footer {
             text-align: center;
             padding: 20px;
             background-color: #f0f0f0;
         }
-
     </style>
 </head>
 <body>
@@ -132,31 +132,40 @@
         </div>
 
         <div class="program-card">
-            <img src="imgs/VOLUNTEER (coral reef restoration).webp" width="500" height="500" alt="Coral Restoration">
-            <div class="overlay">Learn More</div>
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (coral reef restoration).webp" alt="Coral Restoration">
+                <div class="overlay">Learn More</div>
+            </div>
             <h2>Coral Reef Restoration Volunteer</h2>
             <p>Join our team to help restore damaged coral reefs. Plant coral fragments and monitor reef health.</p>
             <button onclick="window.location.href='#'">Learn More</button>
         </div>
 
         <div class="program-card">
-            <img src="imgs/VOLUNTEER (beach cleanup).webp" width="500" height="500" alt="Beach Cleanup">
-            <div class="overlay">Learn More</div>
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (beach cleanup).webp" alt="Beach Cleanup">
+                <div class="overlay">Learn More</div>
+            </div>
             <h2>Beach Cleanup and Marine Debris Removal</h2>
             <p>Participate in beach cleanups to remove plastic and other debris, protecting marine life.</p>
             <button onclick="window.location.href='#'">Join Us</button>
         </div>
 
         <div class="program-card">
-            <img src="marine_monitoring.jpg" width="500" height="500" alt="Marine Monitoring">
-            <div class="overlay">Learn More</div>
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (Marine monitoring).webp" alt="Marine Monitoring">
+                <div class="overlay">Learn More</div>
+            </div>
             <h2>Marine Life Monitoring and Data Collection</h2>
             <p>Assist scientists in collecting data on marine species and their habitats. Learn about ocean ecosystems.</p>
             <button onclick="window.location.href='#'">Apply Now</button>
         </div>
 
         <div class="program-card">
-            <img src="imgs/VOLUNTEER (Education).jpg" alt="Educational Outreach">
+            <div class="image-container">
+                <img src="imgs/VOLUNTEER (Education).jpg" alt="Educational Outreach">
+                <div class="overlay">Learn More</div>
+            </div>
             <h2>Educational Outreach and Community Engagement</h2>
             <p>Educate the public about ocean conservation through workshops and presentations. Inspire action!</p>
             <button onclick="window.location.href='#'">Volunteer</button>
@@ -183,12 +192,10 @@
     </section>
 
     <footer>
-        <body>
-            <div id="splash-content">
-                <h1>Blue Tech</h1>
-                <button class="splash-button" onclick="window.location.href='(m)_pageEditor_ST1.html'">Page Editor</button>>Page Editor</button>
-            </div>
-        </body>
+        <div id="splash-content">
+            <h1>Blue Tech</h1>
+            <button class="splash-button" onclick="window.location.href='(m)_pageEditor_ST1.html'">Page Editor</button>
+        </div>
     </footer>
 
 </body>
