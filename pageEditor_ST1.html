@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color:rgb(21, 38, 66);
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(15, 27, 48); /* darker blue footer */
+        }
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor Student - Sidney Omorodion Bowie</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+
+</head>
+<body>
+    
+
+    <header id="top">
+        <h1>Ocean X</h1>
+    </header>
+
+    <section class="stud">
+        <h2>Sidney Omorodion Bowie, Student 1</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+
+            <section>
+                <h2 id="splash">Splash Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The Splash screen uses HTML and CSS to create an interactive screenwith a striking background witha button that the user can use to take them to this page (page editor). The page then takese the user to the home page after a period of 4 seconds. The button and title are both centred in the page by using: position: relative. the font and font colour are set to white so they can be clearly viewed by the user. With the use of background-size: cover; and background-position: center the background is made to cover the entirety of the page in order to look neat and presentable </p> 
+                    
+                    <h3>Accessibility</h3>
+                        <p>This page is user friendly allowing the user to clearly view the title and theme of the page with a hover feature over the page editor button to give the user the implication that the button is fully functional.</p>
+                    
+                    <h3>Link to the page</h3>
+                        <p><a href="splash.html">Splash Screen.</a></p>
+            </section>
+
+            <section>
+                <h2 id="volunteer">Volunteer Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>The volunteer page background is set to blue using background-colour:rgb(21, 38, 66); to match the theme of the rest of the webpage with the program-grid section being used to organize the images in a 2x2 grid formation for a more appealing aesthetic. I implemented .program-card .image-container:hover .overlay to adjust the transparency of the colour that appears over each image when the user hovers over them and each image displayed is set to the same height and width to give it a more appealing look. </p> 
+
+                    <h3>Accessibility</h3>
+                        <p>The page is neatly organised so that the user has no issue navigating through the page with each volunteering position being organized neatly in a grid formation with a "Learn more" text being displayed when each image is hovered over by the user. I also left a added two section at the bottom for user reviews with an overall review being displayed above so the user is able to guage the quality and success of the provided volunteering programs.</p>
+
+                    <h3>Link to the page</h3>
+                        <p><a href="volunteer.html">Volunteer page.</a></p>
+            </section>
+
+            <section>
+                <h2 id="content">Content Page</h2>
+                    <h3>Technical Description</h3>
+                        <p>A small navigation bar that uses position: sticky; that allows it to stay visibile on the screen no matter how far the user scrolls so it is always available to them whenever they want to use it. Each image is set the the same size using width-"700" and height="500" next to each image link. A go to the top button using position: fixed; is displayed at the bottom right corner of the screen which just like the navigation bar is constantly visible on the screen regardless of how far the user scrolls. It uses href="#top" to take the user back to the top of the page.</p> 
+
+                    <h3>Accessibility</h3>
+                        <p>A navigation bar at the top of the page allows the user to quickly take themselves to different points of the page to allow them to find relevent inforation with ease. The implementation of the go to the top button which is constantly visible on the screen allows the user to take themselves back to the top of the page without having to scroll all the way to the top themselves make the page feel less tedious to go through. All images are displayed in an organized fashion with the relevent text underneath it to clearly show which topics are linked to which images, avoiding any confusion when reading through each topic. I used <section></section> to split each group of text into sections which I seperated with a thin white line and a drop down box that allows the user to filter their search for easier navigation through the page.</p>
+
+                    <h3>Link to the page</h3>
+                        <p><a href="content_ST1.html">Content 1.</a></p>
+            </section>
+
+            <section>
+                <h2 id="challenge"> Challenges and Lessons Learned</h2>
+                    <p>One of the challenges I faced while creating these pages was getting the navigation bar to stick to the top of the page and not go out of site when the user scrolled. After a little research it was a simple fix that only required a small amount of editing. Another challenge faced was getting buttons and iamges to be highlighted when the user hovered over them which I wanted to do for the sake of making the site more appealing to the user. Getting the background image to properly display on the entirety of the screen was also a challenge which I later resolved by centering the image and ensuring that there is no overlapping or repeating on the page.</p> 
+            </section>
+
+            <section>
+                <h2 id="compliance"> Compliance</h2>
+                    <p>My pages abide by the Janet regulations by using free to use stock images from sites such as istockphoto, it doesnt use any material that could be percieved as offensive or obscene and doesn't contain the use of any unsolicited commertial material (also knownas spam) in any part of my work.</p> 
+
+                    
+            </section>
+
+            <section>
+                <h2 id="ref">References</h2>
+                    <ul class="ref">
+                        <li>https://stockcake.com</li>
+                        <li>https://www.istockphoto.com</li>
+                        <li>https://www.nature.com</li>
+                        
+                    </ul>
+            </section>
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+            <ul class="top-level-ul">
+                
+                <li>Student 1</li>
+                    <ul> 
+                        <li><a href="#splash">Splash page</a></li>
+                        <li><a href="#volunteer">Volunteer page</a></li>
+                        <li><a href="#content">Content page</a></li>
+        </aside>
+    </div>
+
+    <footer>
+        <div id="splash-content">
+            <h1>Ocean X</h1>
+            <button class="splash-button" onclick="window.location.href='pageEditor_ST1.html'">Page Editor</button>
+        </div>
+    </footer>
+</body>
+</html>
