@@ -8,86 +8,27 @@
         body {
             font-family: Tahoma, sans-serif;
             line-height: 1.6;
-            margin: 0; /* Remove default body margin */
+            margin: 20px;
             background-color: rgb(21, 38, 66);
             color: #fff;
         }
-
-        /* Header Styles */
-        header {
-            background-color: rgb(10, 20, 35); /* Darker header */
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .header-buttons {
-            display: flex;
-            align-items: center;
-        }
-
-        .header-buttons a, .dropdown {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #fff;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-        }
-
-        .header-buttons a:hover, .dropdown:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgb(15, 27, 48);
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Navigation Bar Styles */
+        /* making sure the navigation bar stays at the top of the screen */
         nav {
-            position: sticky;
+            position: sticky; 
             top: 0;
             background-color: rgb(15, 27, 48);
             padding: 10px 0;
             text-align: center;
-            z-index: 100;
+            z-index: 100; 
         }
-
+        
+        /* nav bar color and width */
         nav a {
             margin: 0 15px;
             text-decoration: none;
             color: #fff;
         }
-
-        /* Go to Top Button Styles */
+        /* positioning of the go to the top button */
         #go-to-top {
             position: fixed;
             bottom: 20px;
@@ -99,7 +40,7 @@
             text-decoration: none;
         }
 
-        /* Section Styles */
+        /* section line width and color */
         section {
             padding: 20px;
             margin-bottom: 20px;
@@ -118,42 +59,29 @@
             color: #007bff;
         }
 
-        /* Footer Styles */
         footer {
             text-align: center;
             padding: 20px;
-            background-color: rgb(15, 27, 48);
+            background-color: rgb(15, 27, 48); /* darker blue footer */
         }
+
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-buttons">
-            <a href="#">Home</a> <a href="#">Feedback</a> <a href="#">Volunteer</a> <a href="#">Profile</a> <a href="#">Sitemap</a> <a href="#">Table</a> <a href="#">Team</a> <div class="dropdown">
-                <button class="dropdown">Content</button>
-                <div class="dropdown-content">
-                    <a href="#">Content 1</a> <a href="#">Content 2</a> <a href="#">Content 3</a> <a href="#">Content 4</a> </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropdown">Page Editor</button>
-                <div class="dropdown-content">
-                    <a href="#">Page Editor 1</a> <a href="#">Page Editor 2</a> <a href="#">Page Editor 3</a> <a href="#">Page Editor 4</a> </div>
-            </div>
-        </div>
-    </header>
-
+    <!-- navigation bar to take user to different sections of the page -->
     <nav>
         <a href="#ocean-life">Ocean Life Preservation</a>
         <a href="#pollution">Ocean Pollution</a>
         <a href="#overfishing">Overfishing</a>
         <a href="#climate-change">Climate Change and Oceans</a>
     </nav>
-
+    <!-- sends user to the top of the page -->
     <a href="#top" id="go-to-top">Go to Top</a>
 
+    <!-- dividing the groups of text into split sections -->
     <section id="ocean-life">
         <h2>Ocean Life Preservation</h2>
+     <!-- adjusting image properties (size) with alternate image description-->
         <img src="imgs/ocean life.jpg" width="700" height="500" alt="Diverse marine life in a coral reef.">
         <p>Ocean life is incredibly diverse, from microscopic plankton to massive whales. Preservation efforts are crucial to maintain this biodiversity. Marine protected areas, sustainable fishing practices, and reducing pollution are key strategies. Protecting coral reefs, which are vital habitats, is also essential. </p>
         <p>Many organizations work tirelessly to protect endangered species and restore damaged ecosystems. Individual actions, such as reducing plastic use and supporting sustainable seafood, can also make a significant impact.</p>
@@ -179,7 +107,7 @@
         <p>Climate change is causing significant impacts on the oceans, including rising sea levels, ocean acidification, and changes in water temperature. Ocean acidification, caused by increased carbon dioxide absorption, affects the ability of marine organisms to form shells and skeletons. Rising temperatures lead to coral bleaching and alter marine species distributions. </p>
         <p>Reducing greenhouse gas emissions and transitioning to renewable energy sources are critical to mitigating the effects of climate change on the oceans.</p>
     </section>
-
+    <!-- footer which holds button to page editor -->
     <footer>
         <div id="splash-content">
             <h1>Blue Tech</h1>
